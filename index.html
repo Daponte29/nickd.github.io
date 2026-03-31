@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nick D | MS Power BI Dashboard</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f3f4f6;
+      color: #1f2937;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: #1a1a2e;
+      color: #ffffff;
+      padding: 24px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    header span {
+      font-size: 0.95rem;
+      color: #f0a500;
+      font-weight: 500;
+    }
+
+    main {
+      flex: 1;
+      padding: 48px 40px;
+      max-width: 960px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      color: #1a1a2e;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #4b5563;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    .badge {
+      display: inline-block;
+      background-color: #f0a500;
+      color: #1a1a2e;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 12px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    .dashboard-container {
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+    }
+
+    .dashboard-header {
+      background-color: #1a1a2e;
+      color: #ffffff;
+      padding: 16px 24px;
+      font-size: 1rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .dashboard-header svg {
+      width: 22px;
+      height: 22px;
+      fill: #f0a500;
+    }
+
+    .dashboard-embed {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 aspect ratio */
+      background-color: #e5e7eb;
+    }
+
+    .dashboard-embed iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .placeholder {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #6b7280;
+      font-size: 1rem;
+      gap: 12px;
+    }
+
+    .placeholder svg {
+      width: 56px;
+      height: 56px;
+      fill: #d1d5db;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 36px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 24px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+      text-align: center;
+    }
+
+    .card .icon {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #1a1a2e;
+      margin-bottom: 6px;
+    }
+
+    .card p {
+      font-size: 0.88rem;
+      color: #6b7280;
+      line-height: 1.5;
+    }
+
+    footer {
+      background-color: #1a1a2e;
+      color: #9ca3af;
+      text-align: center;
+      padding: 20px 40px;
+      font-size: 0.85rem;
+    }
+
+    footer a {
+      color: #f0a500;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Nick D</h1>
+    <span>MS Power BI Dashboard</span>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="badge">Power BI</div>
+      <h2>Data Insights Dashboard</h2>
+      <p>
+        Welcome to my interactive MS Power BI dashboard. Explore data visualizations,
+        trends, and key metrics all in one place.
+      </p>
+    </div>
+
+    <div class="dashboard-container">
+      <div class="dashboard-header">
+        <!-- Power BI icon -->
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 3h4v18H3V3zm6 4h4v14H9V7zm6 4h4v10h-4V11z"/>
+        </svg>
+        Power BI Dashboard
+      </div>
+      <div class="dashboard-embed">
+        <!--
+          Replace the placeholder below with your actual Power BI embed URL.
+          Example:
+          <iframe
+            src="https://app.powerbi.com/reportEmbed?reportId=YOUR_REPORT_ID&autoAuth=true&ctid=YOUR_TENANT_ID"
+            allowFullScreen="true">
+          </iframe>
+        -->
+        <div class="placeholder">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 3h4v18H3V3zm6 4h4v14H9V7zm6 4h4v10h-4V11z"/>
+          </svg>
+          <p>Embed your Power BI report here.</p>
+          <p style="font-size:0.85rem;">Replace the placeholder comment in <code>index.html</code> with your embed <code>&lt;iframe&gt;</code>.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <div class="icon">📊</div>
+        <h3>Interactive Reports</h3>
+        <p>Drill down into data with dynamic, interactive visuals.</p>
+      </div>
+      <div class="card">
+        <div class="icon">📈</div>
+        <h3>Trend Analysis</h3>
+        <p>Track performance over time with built-in trend lines.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🔍</div>
+        <h3>Data Exploration</h3>
+        <p>Filter and slice data to uncover meaningful insights.</p>
+      </div>
+      <div class="card">
+        <div class="icon">⚡</div>
+        <h3>Real-Time Updates</h3>
+        <p>Stay current with live data refreshes from your source.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>
+      &copy; 2026 Nick D &mdash; Built with
+      <a href="https://powerbi.microsoft.com/" target="_blank" rel="noopener noreferrer">Microsoft Power BI</a>
+      &amp; hosted on
+      <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>
+    </p>
+  </footer>
+
+</body>
+</html>
