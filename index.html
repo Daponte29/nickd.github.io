@@ -1,22 +1,64 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Data Portfolio</title>
+    <title>Pollutants</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            color: #222;
+            margin-bottom: 6px;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 16px;
+        }
+
+        .iframe-container {
+            width: 100%;
+            max-width: 1400px;
+            aspect-ratio: 16 / 9;
+        }
+
+        .iframe-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+        }
+    </style>
 </head>
 <body>
 
-<h1>My Power BI Dashboard</h1>
-
+<h1>Pollutant Dashboards</h1>
 <p>2018–2024 Selected Pollutants in Georgia, USA</p>
 
-<iframe 
-    title="U.S Georgia Pollutants EPA"
-    width="900" 
-    height="600"
-    src="https://app.powerbi.com/view?r=eyJrIjoiNzU4OGIwNzgtMzQwNy00YThjLTk0NWItZmFhNmRkODc5OWJjIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9"
-    frameborder="0"
-    allowFullScreen="true">
-</iframe>
+<div class="iframe-container">
+    <iframe
+        title="U.S Georgia Pollutants EPA"
+        src="https://app.powerbi.com/view?r=eyJrIjoiNzU4OGIwNzgtMzQwNy00YThjLTk0NWItZmFhNmRkODc5OWJjIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9"
+        allowfullscreen>
+    </iframe>
+</div>
 
 </body>
 </html>
